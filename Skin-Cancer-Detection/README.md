@@ -36,7 +36,6 @@ Fine-tuning
 
 Example of predictions:
 
-Deep-Learnign-Projeacts/Skin-Cancer-Detection/images/ISIC_0024373.jpg
 ![Sample Image](ISIC_0024373.jpg)
 
 
