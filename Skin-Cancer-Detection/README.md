@@ -34,4 +34,7 @@ Fine-tuning
 - Understood the importance of careful fine-tuning and class balancing.
 - Improved skills in model evaluation and visualization.
 
-- 
+Example of predictions:
+
+![Sample Images](assets/sample_predictions.png)
+
