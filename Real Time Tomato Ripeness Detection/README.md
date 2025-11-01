@@ -153,3 +153,7 @@ Try the interactive demo here:
 [Gradio App Link](https://huggingface.co/spaces/Hesham-vision/Tomato-Ripeness-Detection)
 
 ## Add sample tomato images
+
+### Sample Tomatoes
+![Mature Tomato](python_original_IMG_20230108_110601.jpg_c11879e7-d663-4cef-8df9-fab1b931d6aa.jpg)
+![Immature Tomato](IMG_20230302_171147.jpg)
