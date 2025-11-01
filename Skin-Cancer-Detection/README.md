@@ -24,11 +24,6 @@ Stratified Train/Val/Test Split
 Fine-tuning
 
 
-## Results
-- **Test Accuracy:** 66.9%
-- **Loss:** 1.93
-- The model shows reasonable performance considering class imbalance and limited dataset size.
-
 ## Key Learnings
 - Learned how to apply transfer learning effectively.
 - Understood the importance of careful fine-tuning and class balancing.
