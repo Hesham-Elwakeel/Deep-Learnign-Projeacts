@@ -126,7 +126,7 @@ The model performs exceptionally well, achieving near-perfect classification of 
 - Changed from `gr.Interface` to `gr.Blocks` for better control
 - Added explicit Submit button with clear event handlers
 - Implemented both manual submission and auto-submission on image upload
-- Added default message: "⏳ Waiting for image upload..."
+- Added default message: "Waiting for image upload"
 
 ---
 
@@ -152,3 +152,4 @@ The model performs exceptionally well, achieving near-perfect classification of 
 Try the interactive demo here:  
 [Gradio App Link](https://huggingface.co/spaces/Hesham-vision/Tomato-Ripeness-Detection)
 
+## Add sample tomato images
