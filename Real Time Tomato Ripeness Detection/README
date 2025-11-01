@@ -1,0 +1,35 @@
+# Tomato Ripeness Detection
+
+This project is a **deep learning application** that detects the ripeness of tomatoes from images.
+
+---
+
+## 🛠 Technologies Used
+- **Python**  
+- **TensorFlow / Keras** for the deep learning model  
+- **Gradio** for creating the interactive web interface  
+- **PIL / NumPy** for image processing  
+
+---
+
+## 🔹 How it Works
+1. Upload an image of a tomato.  
+2. The app preprocesses the image and resizes it to 224x224.  
+3. A fine-tuned CNN model predicts the ripeness: **Mature** or **Immature**.  
+4. The result and confidence score are displayed on the interface.
+
+---
+
+## 🚀 Demo
+You can try the live demo here:  
+[Gradio App Link](https://huggingface.co/spaces/Hesham-vision/Tomato-Ripeness-Detection)
+
+---
+
+## 💡 Usage
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+python app.py
