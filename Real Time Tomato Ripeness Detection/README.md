@@ -99,32 +99,7 @@ The model performs exceptionally well, achieving near-perfect classification of 
 
 ---
 
-### 3. **File Path Errors During Data Splitting**
-**Problem:** `FileNotFoundError` when trying to copy images to train/val/test folders due to:
-- Special characters in filenames
-- Missing files
-- Incorrect path handling
-
-**Solution:**
-- Added file existence checks before copying: `if os.path.exists(src)`
-- Filtered only image files using extensions: `.jpg`, `.jpeg`, `.png`
-- Implemented try-except blocks for error handling
-- Added progress logging to track which files failed
-
----
-
-### 4. **Undefined Variables After Session Loss**
-**Problem:** Variables like `test_generator`, `CLASS_NAMES`, `IMG_SIZE` were undefined after session restart.
-
-**Solution:**
-- Created a dedicated cell to reload all necessary configurations
-- Recreated data generators from saved split folders
-- Defined all constants (IMG_SIZE, CLASS_NAMES) in a single cell
-- Made the code modular to easily re-run specific sections
-
----
-
-### 5. **Model Loading Issues on Hugging Face**
+### 3. **Model Loading Issues on Hugging Face**
 **Problem:** Multiple deployment errors on Hugging Face Spaces:
 - `ModuleNotFoundError: No module named 'cv2'`
 - Build errors due to incompatible TensorFlow versions
@@ -144,7 +119,7 @@ The model performs exceptionally well, achieving near-perfect classification of 
 
 ---
 
-### 6. **Output Not Displaying in Gradio Interface**
+### 4. **Output Not Displaying in Gradio Interface**
 **Problem:** After uploading an image, the output panel remained empty.
 
 **Solution:**
@@ -152,35 +127,6 @@ The model performs exceptionally well, achieving near-perfect classification of 
 - Added explicit Submit button with clear event handlers
 - Implemented both manual submission and auto-submission on image upload
 - Added default message: "⏳ Waiting for image upload..."
-
----
-
-### 7. **Binary Classification Output Confusion**
-**Problem:** Initially used `np.argmax()` for binary classification, which is incorrect for single sigmoid output.
-
-**Solution:**
-- Changed output interpretation for binary classification:
-```python
-  pred_prob = model.predict(img)[0][0]
-  if pred_prob > 0.5:
-      pred_class = 'Mature'
-  else:
-      pred_class = 'Immature'
-```
-- Updated confidence calculation accordingly
-
----
-
-### 8. **Model Download Issues**
-**Problem:** Couldn't download model because filename included timestamp, not the generic `model.h5`.
-
-**Solution:**
-- Created a script to automatically find the latest model:
-```python
-  finetuned_models = [f for f in model_files if 'finetuned' in f.lower()]
-  latest_model = sorted(finetuned_models)[-1]
-```
-- Added option to save model with simple name: `tomato_final_model.h5`
 
 ---
 
